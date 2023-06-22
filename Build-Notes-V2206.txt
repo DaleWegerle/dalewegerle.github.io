@@ -14,8 +14,6 @@ add DESE range icons to range menu
 
 
 
-
-
 Genset Range:
 ===============================
 taget blank_ on all ranges
