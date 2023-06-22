@@ -1,0 +1,120 @@
+Universal:
+=============================
+Meta tags
+Add Cart widget
+search bar 
+add range icons to range banner
+
+
+Index
+===========================
+add DSE range icons to product section 
+
+
+
+Nav:
+=============================
+DSEControl/Power/Genset/ATS taget blank_
+All ranges target blank
+add DESE range icons to range menu
+
+
+
+
+
+Genset Range:
+===============================
+taget blank_ on all ranges
+
+
+
+DSEControl Vehicle & Off-Highway Machinery Control Systems (M-Series):
+==================================
+KEYED product image
+DSE870 link
+DSEM835 product page image
+DSEM643 product image + product name
+
+
+
+DSEControl Accessories:
+===================================
+keyed/non keyed title
+first product no link
+DSEM643 product page image
+M643 Connector Set product page link
+M643 Connector Set _ change title to harness - link to harness
+M640 Connector Set image
+M240 Connector set+harness change images
+DT16 Deutsch Connector A link
+
+DSEPower
+===================================
+Title
+scroll down title and anchor
+
+
+DSEPOWER 12-volt Battery Chargers
+===================================
+Anchor link + title
+title
+BC2410EI = link
+DSE9150 = link
+
+
+DSEPOWER 24-volt Battery Chargers
+===================================
+Anchor link + title
+title
+BC2410EI incorrect product page
+DSE9474 no image on range page
+
+
+Enclosed Intelligent Battery Chargers
+====================================
+BC2410EI wrong link to product page
+
+
+Intelligent Battery Chargers
+====================================
+BC2410Ei incorrect product page
+DSE9470 add MKII to title
+
+
+Multiple Output Battery Chargers
+====================================
+link directly to product page -> DSE9462 (Dual Output)
+
+
+DSEAts range
+====================================
+Title = DSEAts
+
+
+DSEAts Power Supplies
+====================================
+DSE160 link to correct page disc + title 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
