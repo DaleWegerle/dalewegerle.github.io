@@ -44,24 +44,14 @@ DT16 Deutsch Connector A link
 
 
 
-DSEPower
-===================================
-Title
-scroll down title and anchor
-
-
 DSEPOWER 12-volt Battery Chargers
 ===================================
-Anchor link + title
-title
 BC2410EI = link
 DSE9150 = link
 
 
 DSEPOWER 24-volt Battery Chargers
 ===================================
-Anchor link + title
-title
 BC2410EI incorrect product page
 DSE9474 no image on range page
 
