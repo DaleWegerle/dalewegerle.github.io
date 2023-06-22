@@ -3,12 +3,6 @@ Universal:
 Meta tags
 Add Cart widget
 search bar 
-remove "range" from DSE product/range hero banners
-
-
-Index
-===========================
-add DSE range icons to product section <--
 
 
 
