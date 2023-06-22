@@ -8,7 +8,7 @@ add range icons to range banner
 
 Index
 ===========================
-add DSE range icons to product section 
+add DSE range icons to product section <--
 
 
 
