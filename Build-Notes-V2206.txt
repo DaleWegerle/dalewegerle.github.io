@@ -21,14 +21,15 @@ Genset Range:
 taget blank_ on all ranges
 
 
+DSEControl
+================================
+Remove duplicate add to quote link 
+Remove product variants title if it doesnt apply
 
 
 
 DSEControl Vehicle & Off-Highway Machinery Control Systems (M-Series):
 ==================================
-KEYED product image
-DSE870 link
-DSEM835 product page image
 DSEM643 product image + product name
 
 
