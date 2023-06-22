@@ -3,6 +3,7 @@ Universal:
 Meta tags
 Add Cart widget
 search bar 
+favicon.png + favicon.svg = favicon.svg
 
 
 
