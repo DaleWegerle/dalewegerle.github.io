@@ -19,12 +19,12 @@ Auto-Mains <
 DC/Hybrid <
 Digital Auto <
 Expansion Modules <
-Lighting
-Load sharing
-Mains
-Manual
-PLC
-Remote Comms
+Lighting <
+Load sharing <
+Mains <
+Manual <
+PLC <
+Remote Comms <
 Software
 Non-Standard
 
