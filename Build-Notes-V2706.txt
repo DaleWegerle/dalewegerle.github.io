@@ -25,12 +25,6 @@ DSEControl
 
 
 
-DSEControl Vehicle & Off-Highway Machinery Control Systems (M-Series):
-==================================
-DSEM643 product image + product name
-
-
-
 DSEControl Accessories:
 ===================================
 keyed/non keyed title
