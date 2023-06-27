@@ -13,7 +13,20 @@ DSEControl/Power/Genset/ATS taget blank_
 All ranges target blank
 add DSE range icons to range menu
 
+GENSET
 
+Auto-Mains <
+DC/Hybrid <
+Digital Auto <
+Expansion Modules <
+Lighting
+Load sharing
+Mains
+Manual
+PLC
+Remote Comms
+Software
+Non-Standard
 
 Genset Range:
 ===============================
