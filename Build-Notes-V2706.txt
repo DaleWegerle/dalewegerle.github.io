@@ -23,16 +23,6 @@ taget blank_ on all ranges
 
 
 
-DSEAts range
-====================================
-Title = DSEAts
-
-
-DSEAts Power Supplies
-====================================
-DSE160 link to correct page disc + title 
-
-
 
 
 
