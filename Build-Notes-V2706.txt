@@ -21,37 +21,6 @@ taget blank_ on all ranges
 
 
 
-DSEControl Accessories:
-===================================
-
-
-
-DSEPOWER 12-volt Battery Chargers
-===================================
-BC2410EI = link
-DSE9150 = link
-
-
-DSEPOWER 24-volt Battery Chargers
-===================================
-BC2410EI incorrect product page
-DSE9474 no image on range page
-
-
-Enclosed Intelligent Battery Chargers
-====================================
-BC2410EI wrong link to product page
-
-
-Intelligent Battery Chargers
-====================================
-BC2410Ei incorrect product page
-DSE9470 add MKII to title
-
-
-Multiple Output Battery Chargers
-====================================
-link directly to product page -> DSE9462 (Dual Output)
 
 
 DSEAts range
