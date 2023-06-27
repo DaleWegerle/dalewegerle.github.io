@@ -20,21 +20,9 @@ Genset Range:
 taget blank_ on all ranges
 
 
-DSEControl
-================================
-
-
 
 DSEControl Accessories:
 ===================================
-keyed/non keyed title
-first product no link
-DSEM643 product page image
-M643 Connector Set product page link
-M643 Connector Set _ change title to harness - link to harness
-M640 Connector Set image
-M240 Connector set+harness change images
-DT16 Deutsch Connector A link
 
 
 
