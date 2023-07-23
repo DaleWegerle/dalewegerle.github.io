@@ -63,6 +63,22 @@
         });
     };
 
+    var cartWidgetOnScrolldown = function() {
+        
+        var widgetTrigger = $('.cart-widget');
+
+        $WIN.on('scroll', function() {
+
+            if ($WIN.scrollTop() > 150) {
+                widgetTrigger.addClass('opaque');
+            }
+            else {
+                widgetTrigger.removeClass('opaque');
+            }
+
+        });
+    };
+
 
    /* OffCanvas Menu
     * ------------------------------------------------------ */
@@ -520,6 +536,7 @@
         clAjaxChimp();
         clBackToTop();
         displaySubMenu();
+        cartWidgetOnScrolldown();
     })();
         
         
