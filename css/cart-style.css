@@ -25,7 +25,9 @@
 }
 
 .material-symbols-outlined.cart-ico{
-  color: #39b54a;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .material-symbols-outlined.cart-ico:hover{
@@ -34,15 +36,17 @@
 
 .cart-widget{
   position: fixed;
-  top: 32px;
+  top: 24px;
   z-index: 500;
   right: 200px;
-  width: 50px;
+  width: 60px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+
 }
 
 .cart-widget.opaque {

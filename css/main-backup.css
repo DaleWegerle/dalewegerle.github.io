@@ -2056,7 +2056,7 @@ input::-moz-focus-inner {
     letter-spacing: .3rem;
     position: relative;
     margin-top: 0;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
     margin-left: 6px;
 }
 
@@ -2069,7 +2069,7 @@ input::-moz-focus-inner {
 }
 
 .home-content__main {
-    padding-top: 24rem;
+    padding-top: 5rem;
     position: relative;
 }
 

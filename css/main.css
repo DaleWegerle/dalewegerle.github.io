@@ -2122,7 +2122,7 @@ ul.product-list{
 }
 
 .home-content__main {
-    padding-top: 24rem;
+    padding-top: 10rem;
     position: relative;
 }
 
@@ -2884,9 +2884,13 @@ img {
     }
 
     .services-list .service-icon {
+        margin: auto;
         font-size: 4.5rem;
         float: none;
         margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

@@ -226,7 +226,6 @@
 
         <a class="cart-widget" href="cart.html">
             <span class="cart-counter">
-                0
             </span>
             <span class="material-symbols-outlined cart-ico">
                 shopping_cart
@@ -248,12 +247,10 @@
 
             <div class="row home-content__main">
 
-                <h3><span style="color: #00DA00; font-weight: bolder;">Welcome to test</span><br>Proud
-                    <span style="color: #ffffff;">distributor</span> and <span><span style="color: #ffffff;">systems
-                            integrator</span> for
-                </h3>
+                
+                <img src="images/logo.png" style="margin-right: 100px; width: 450px;" alt="Hagar Distribution Logo">
                 <br>
-                <img src="images/logo.png" style="margin-right: 100px;" alt="Hagar Distribution Logo">
+                <h3><br>Proud <span style="color: #ffffff;">distributor</span> and <span><span style="color: #ffffff;">systems integrator</span> for</h3>
                 <img src="images/DSE-Logo.svg" style="width: 300px;" alt="Deep Sea Electronics Logo">
 
                 <div class="home-content__buttons">
@@ -423,7 +420,7 @@
 
             <div class="col-block service-item" data-aos="fade-up" style="margin-bottom: 25px;">
                 <div class="service-icon">
-                    <a href="products\dsecontrol\dsecontrol.html"><img src="images/control.svg" alt=""></a>
+                    <a href="products\dsecontrol\dsecontrol.html" target="_blank"><img src="images/control.svg" alt=""></a>
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Engine & Off-Highway
@@ -441,7 +438,7 @@
 
             <div class="col-block service-item" data-aos="fade-up" style="margin-bottom: 25px;">
                 <div class="service-icon">
-                    <a href="products/dsepower/dsepower.html"><img src="images/power.svg" alt=""></a>
+                    <a href="products/dsepower/dsepower.html" target="_blank"><img src="images/power.svg" alt=""></a>
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Intelligent Battery
@@ -459,7 +456,7 @@
 
             <div class="col-block service-item" data-aos="fade-up" style="margin-bottom: 25px;">
                 <div class="service-icon">
-                    <a href="products\dseats\ats.html"><img src="images/ats.svg" alt=""></a>
+                    <a href="products\dseats\ats.html" target="_blank"><img src="images/ats.svg" alt=""></a>
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Auto Transfer Switch
@@ -1017,6 +1014,24 @@
 
             setTimeout(showSlides, 4000); // Change image every 2 seconds
         }
+        showSlides();
+
+        let slideIndexMobi = 0;
+        function showSlidesMobi() {
+            let i;
+            let mySlidesMobi = document.getElementsByClassName("mySlidesMobi");
+            for (i = 0; i < mySlidesMobi.length; i++) {
+                mySlidesMobi[i].style.display = "none";
+            }
+            slideIndexMobi++;
+            if (slideIndexMobi > mySlidesMobi.length) { slideIndexMobi = 1 }
+
+            mySlidesMobi[slideIndexMobi - 1].style.display = "block";
+
+            setTimeout(showSlidesMobi, 4000); // Change image every 2 seconds
+        }
+        showSlidesMobi();
+
     </script>
 
     <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
