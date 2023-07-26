@@ -1618,6 +1618,11 @@ input::-moz-focus-inner {
     transition: all 0.3s ease-in-out;
 }
 
+.header-logo img{
+    width: 250px;
+    max-width: none;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## main navigation 
@@ -1979,6 +1984,11 @@ input::-moz-focus-inner {
 
     .header-logo {
         left: 30px;
+    }
+
+    .header-logo img{
+        width: 200px;
+        max-width: none;
     }
 
     .header-menu-toggle {
