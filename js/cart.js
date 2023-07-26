@@ -144,7 +144,8 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
     updateCartCounter();
   }
 
-  var cartWidgetOnScrolldown = function() {
+  
+var cartWidgetOnScrolldown = function() {
         
     var widgetTrigger = $('.cart-widget');
 
