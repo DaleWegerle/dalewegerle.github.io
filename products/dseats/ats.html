@@ -40,6 +40,7 @@
     ================================================== -->
     <script src="../../js/modernizr.js"></script>
     <script src="../../js/pace.min.js"></script>
+    
 
 
     <!-- favicons
@@ -297,22 +298,22 @@
 
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon">
-                    <a href="power-supplies.html"><img src="images/DSEAts_Power-350x208.png" alt=""></a>
+                    <a href="power-supplies.html" target="_blank"><img src="images/DSEAts_Power-350x208.png" alt=""></a>
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Power Supplies</h3>
-                    <p><a class="view-product" href="power-supplies.html">View Range</a></p>
+                    <p><a class="view-product" target="_blank" href="power-supplies.html">View Range</a></p>
                 </div>
             </div>
 
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon">
-                    <a href="automatic-transfer-switch-control-modules.html"><img
+                    <a href="automatic-transfer-switch-control-modules.html" target="_blank"><img
                             src="images/DSEAts_AutomaticTransfer-350x208.png" alt=""></a>
                 </div>
                 <div class="service-text">
                     <h3 class="h2">Automatic Transfer Switch Control Modules</h3>
-                    <p><a class="view-product" href="automatic-transfer-switch-control-modules.html">View Range</a>
+                    <p><a class="view-product" target="_blank" href="automatic-transfer-switch-control-modules.html">View Range</a>
                     </p>
                 </div>
             </div>
@@ -545,10 +546,18 @@
                     <div class="pswp__caption__center"></div>
                 </div>
             </div>
-
         </div>
 
     </div> <!-- end photoSwipe background -->
+
+    <script>
+        $(document).ready(function(){
+           $("a").attr("target", "_blank");
+        });
+     </script>
+
+
+
 
     <script>
         let slideIndex = 0;
@@ -591,7 +600,7 @@
     <script src="../../js/plugins.js"></script>
     <script src="../../js/main.js"></script>
     <script src="../../js/cart.js"></script>
-    <script src="../../js/cart.js"></script>
+    
 
 </body>
 

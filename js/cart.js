@@ -77,6 +77,8 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
 
  //#########################################################
 
+
+
   document.querySelector('.view-product-link').addEventListener('click', () => {
     const productString = document.querySelector('h1.display-2').textContent;
     const productImage = document.querySelector('.service-icon img').src;
@@ -141,7 +143,8 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
 
   function clearCart(){
     localStorage.clear();
-    updateCartCounter();
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    renderCart();
   }
 
   
