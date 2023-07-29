@@ -1,8 +1,3 @@
-/* ===================================================================
- * Glint - Main JS
- *
- * ------------------------------------------------------------------- */
-
 (function($) {
 
     "use strict";
@@ -19,6 +14,7 @@
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 
+    
 
    /* Preloader
     * -------------------------------------------------- */
@@ -518,6 +514,10 @@
         });
     };
 
+    var blankLink = function (){
+        var a = document.getElementsByClassName('.view-product').target = "_blank";
+    };
+
 
    /* Initialize
     * ------------------------------------------------------ */
@@ -538,6 +538,7 @@
         clAjaxChimp();
         clBackToTop();
         displaySubMenu();
+        blankLink();
         cartWidgetOnScrolldown();
     })();
         
