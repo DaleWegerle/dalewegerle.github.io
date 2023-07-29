@@ -47,7 +47,7 @@
 
 </head>
 
-<body id="top">
+<body id="top" onload="renderCart()">
 
     <!-- header
     ================================================== -->
@@ -225,7 +225,7 @@
         </a>
 
         <a class="cart-widget" href="cart.html">
-            <span class="cart-counter">
+            <span class="cart-counter" onload="">
             </span>
             <span class="material-symbols-outlined cart-ico">
                 shopping_cart
@@ -993,9 +993,13 @@
 
         </div>
 
-    </div> <!-- end photoSwipe background -->
+   </div> <!-- end photoSwipe background -->
 
     <script>
+        
+        
+        setInterval(updateCartCounter, 1000);
+    
         let slideIndex = 0;
         showSlides();
 

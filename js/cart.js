@@ -77,7 +77,8 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
 
  //#########################################################
 
-
+ 
+  
 
   document.querySelector('.view-product-link').addEventListener('click', () => {
     const productString = document.querySelector('h1.display-2').textContent;
@@ -95,12 +96,14 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
 
   function updateCartCounter() {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
-    let totalQuantity = 0;
-    for (const product in cart) {
-      totalQuantity += cart[product].quantity;
+    let totalQuantity = 0; 
+    for (const productString in cart) {
+      totalQuantity += cart[productString].quantity;
     }
     document.querySelector('.cart-counter').textContent = totalQuantity;
   }
+
+
   
   function renderCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
@@ -121,6 +124,8 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
             <input class="quantity" type="number" id="quantity" name="quantity" min="1" max="5" value="${cart[product].quantity}">
       </div>
       `;
+
+
       cartList.appendChild(cartItem);
       cartItem.querySelector('input').addEventListener('input', (event) => {
         const quantity = parseInt(event.target.value);
@@ -137,14 +142,17 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
         delete cart[product];
         localStorage.setItem('cart', JSON.stringify(cart));
         renderCart();
+        updateCartCounter();
       });
     }
+    updateCartCounter();
   }
 
   function clearCart(){
     localStorage.clear();
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     renderCart();
+    updateCartCounter();
   }
 
   
@@ -164,6 +172,8 @@ var cartWidgetOnScrolldown = function() {
     });
 };
 
+
+updateCartCounter();
 cartWidgetOnScrolldown();
 
 
