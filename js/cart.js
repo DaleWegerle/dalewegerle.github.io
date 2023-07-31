@@ -172,6 +172,31 @@ var cartWidgetOnScrolldown = function() {
     });
 };
 
+updateCartCounter();
+cartWidgetOnScrolldown();
+
+
+var quoteCart = function (){
+
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'inc/sendQuote.php');
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+        alert('Quote request sent!');
+    }
+    else if (xhr.status !== 200) {
+        alert('Request failed.  Returned status of ' + xhr.status);
+    }
+};
+
+xhr.send(encodeURI('cart=' + JSON.stringify(cart)));
+
+}
+
+
+
 
 updateCartCounter();
 cartWidgetOnScrolldown();

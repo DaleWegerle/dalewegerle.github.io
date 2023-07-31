@@ -111,59 +111,7 @@
 
     };
 
-    /* Popout Menu
-    * ------------------------------------------------------ 
-
-
-    function displaySubMenu() {
-        let gensetLink = document.getElementById("Genset");
-        gensetLink.addEventListener("mouseover", function () { displayMenu("DSEGenset-nav") });
-        let atsLink = document.getElementById("Ats");
-        atsLink.addEventListener("mouseover", function () { displayMenu("DSEAts-nav") });
-        let powerLink = document.getElementById("Power");
-        powerLink.addEventListener("mouseover", function () { displayMenu("DSEPower-nav") });
-        let controlLink = document.getElementById("Control");
-        controlLink.addEventListener("mouseover", function () { displayMenu("DSEControl-nav") });
-
-        let gensetMenu = document.getElementsByClassName("DSEGenset-nav")[0];
-        gensetMenu.addEventListener("mouseleave", function () { hideMenu() });
-        let atsMenu = document.getElementsByClassName("DSEAts-nav")[0];
-        atsMenu.addEventListener("mouseleave", function () { hideMenu() });
-        let powerMenu = document.getElementsByClassName("DSEPower-nav")[0];
-        powerMenu.addEventListener("mouseleave", function () { hideMenu() });
-        let controlMenu = document.getElementsByClassName("DSEControl-nav")[0];
-        controlMenu.addEventListener("mouseleave", function () { hideMenu() });
-
-        let unhover = document.getElementsByClassName("unclick")[0];
-        let unhoverBottom = document.getElementsByClassName("unclick")[1];
-        unhover.addEventListener("mouseover", function () { hideMenu() });
-        unhoverBottom.addEventListener("mouseover", function () { hideMenu() });
-        
-
-        function displayMenu(className){
-            document.getElementsByClassName("DSEGenset-nav")[0].style.display = "none";
-            document.getElementsByClassName("DSEAts-nav")[0].style.display = "none";
-            document.getElementsByClassName("DSEPower-nav")[0].style.display = "none";
-            document.getElementsByClassName("DSEControl-nav")[0].style.display = "none";
-            let displayDropdown = document.getElementsByClassName(className)[0];
-            displayDropdown.style.display = "block";
-        }
-
-        //let leaveHover = document.getElementsByClassName("leaveHoverArea");
-        //leaveHover.addEventListener("mouseleave", function () { hideMenu() });
-
-        function hideMenu(){
-            document.getElementsByClassName("DSEGenset-nav")[0].style.display = "none";
-            document.getElementsByClassName("DSEAts-nav")[0].style.display = "none";
-            document.getElementsByClassName("DSEPower-nav")[0].style.display = "none";
-            document.getElementsByClassName("DSEControl-nav")[0].style.display = "none";
-            
-        }
-    }
-
-    //var x = window.matchMedia("(min-width: 768px)");
-    //displaySubMenu(x);
-    //x.addEventListener(displaySubMenu);*/
+    
 
 
    /* photoswipe
