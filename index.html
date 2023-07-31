@@ -278,10 +278,6 @@
     ====================================================-->
 
     <section id="product-carousel" class="slider-desktop">
-        <!--<img src="images/slider_4520mkii[1].jpg" alt="">
-        <img src="images/slider_7310mkii.jpg" alt="">
-        <img src="images/slider_7320mkii (1).jpg" alt="">
-        <img src="images/slider_g8-1.jpg" alt="">-->
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
@@ -300,12 +296,12 @@
         </div>
     </section>
 
-    <section id="product-carousel" class="slider-mobile">
+    <section id="product-carousel-mobile" class="slider-mobile">
         <!--<img src="images/slider_4520mkii[1].jpg" alt="">
         <img src="images/slider_7310mkii.jpg" alt="">
         <img src="images/slider_7320mkii (1).jpg" alt="">
         <img src="images/slider_g8-1.jpg" alt="">-->
-        <div class="slideshow-container">
+        <div class="slideshow-container-mobile">
             <div class="mySlidesMobi fade">
                 <div class="numbertext">1 / 3</div>
                 <img src="images/mobile_slider_4520mkii[1].jpg" style="width:100%">
@@ -973,7 +969,7 @@
     <script>
         
         
-        setInterval(updateCartCounter, 1000);
+        
     
         let slideIndex = 0;
         showSlides();
@@ -1008,6 +1004,8 @@
             setTimeout(showSlidesMobi, 6000);
         }
         showSlidesMobi();
+
+        setInterval(updateCartCounter, 1000);
 
     </script>
 
