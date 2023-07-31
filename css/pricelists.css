@@ -3402,7 +3402,7 @@ img {
     background-position: center, center;
     padding-top: 15rem;
     padding-bottom: 12rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
     position: relative;
 }
 
@@ -3466,7 +3466,7 @@ img {
 .contact-content {
     max-width: 1000px;
     background-color: rgba(0, 0, 0, 0.489);
-    color: rgba(255, 255, 255, 0.4);
+    color: rgb(255, 255, 255);
     padding-top: 6rem;
     padding-bottom: 6rem;
     font-family: 'Barlow Semi Condensed', sans-serif;
