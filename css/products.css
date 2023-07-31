@@ -1582,6 +1582,10 @@ input::-moz-focus-inner {
  * # header styles
  *
  * ------------------------------------------------------------------- */
+ .smoothscroll:hover{
+    cursor: default;
+   }
+   
 .s-header {
     width: 100%;
     height: 96px;

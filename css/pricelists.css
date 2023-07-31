@@ -1627,6 +1627,10 @@ input::-moz-focus-inner {
 /* ------------------------------------------------------------------- 
  * ## main navigation 
  * ------------------------------------------------------------------- */
+ .smoothscroll:hover{
+    cursor: default;
+   }
+   
  .header-nav {
     background: #0C0C0C;
     color: rgba(255, 255, 255, 0.25);
