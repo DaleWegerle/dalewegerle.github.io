@@ -1653,6 +1653,10 @@ input::-moz-focus-inner {
     
 }
 
+.smoothscroll:hover{
+ cursor: default;
+}
+
 .menu-top{
     margin-bottom: 35px;
 }
@@ -1675,6 +1679,10 @@ input::-moz-focus-inner {
 
 .DSEGenset-nav, .DSEAts-nav, .DSEPower-nav, .DSEControl-nav a{
     line-height: normal;
+}
+
+.DSEControl-nav li:hover{
+    cursor: none;
 }
 
 .product-list {
@@ -1738,10 +1746,12 @@ ul.product-list{
 
 .hover-area:hover .DSEGenset-nav{
     display: block;
+
 }
 
 .hover-area:hover .DSEControl-nav{
     display: block;
+
 }
 
 .hover-area:hover .DSEPower-nav{
