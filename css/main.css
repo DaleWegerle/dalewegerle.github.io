@@ -2088,9 +2088,9 @@ ul.product-list{
     width: 100%;
     height: 100%;
     opacity: .4;
-    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgb(0, 0, 0) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 }
 
@@ -2113,6 +2113,16 @@ ul.product-list{
  * ## home content
  * ------------------------------------------------------------------- */
 .home-content {
+    display: table-cell;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    padding-bottom: 15.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-banner{
     display: table-cell;
     width: 100%;
     height: auto;
