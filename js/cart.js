@@ -81,6 +81,7 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
   
 
   document.querySelector('.view-product-link').addEventListener('click', () => {
+    document.getElementsByClassName(".view-product-link").innerHTML = "Item added to cart";
     const productString = document.querySelector('h1.display-2').textContent;
     const productImage = document.querySelector('.service-icon img').src;
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
@@ -90,6 +91,7 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
       cart[productString] = { image: productImage, quantity: 1 };
     }
     localStorage.setItem('cart', JSON.stringify(cart));
+    document.getElementsByClassName(".view-product-link").innerHTML = "Item added to cart";
     renderCart();
     updateCartCounter();
   });

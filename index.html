@@ -226,7 +226,7 @@
             <span class="header-menu-icon"></span>
         </a>
 
-        <a class="cart-widget" href="cart.html">
+        <a class="cart-widget" href="cart.html" onmouseover="updateCartCounter()">
             <span class="cart-counter" onload="">
             </span>
             <span class="material-symbols-outlined cart-ico">
@@ -296,7 +296,7 @@
 
             <div class="mySlides fade">
                 <div class="numbertext">4 / 4</div>
-                <a href="products/dsegenset/advanced-paralleling-gen-set-controllers.html" target="_blank"><img src="images/slider_g8-1.jpg" style="width:100%"></a>
+                <a href="products/dsegenset/advanced-paralleling-gen-set-controllers.html" target="_blank"><img src="images/slider-remote.jpg" style="width:100%"></a>
             </div>
         </div>
     </section>
@@ -977,7 +977,7 @@
         
     
         let slideIndex = 0;
-        showSlides();
+      
 
         function showSlides() {
             let i;
@@ -990,8 +990,9 @@
 
             slides[slideIndex - 1].style.display = "block";
 
-            setTimeout(showSlides, 6000); // Change image every 2 seconds
+            setTimeout(showSlides, 6000); 
         }
+
         showSlides();
 
         let slideIndexMobi = 0;
