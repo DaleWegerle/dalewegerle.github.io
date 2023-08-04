@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'dalewegerledev@gmail.com';
+$siteOwnersEmail = 'trevor@hagar.co.za';
 
 
 if($_POST) {

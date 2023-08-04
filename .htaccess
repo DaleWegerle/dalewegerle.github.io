@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteBase /
+
+# Rewrites all URLS without blog in them
+RewriteCond %{REQUEST_URI} !^/hagar/
+
+# Rewrites all URLS [Replace "example" with the actual domain, without the TLD (.com, .net, .biz, etc)]
+RewriteCond %{HTTP_HOST} ^(www\.)?hagar\.co.za
+
+# Rewrite all those to insert /folder
+RewriteRule ^(.*)$ /hagar/$1 [L]
