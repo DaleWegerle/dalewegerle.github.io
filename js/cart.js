@@ -91,7 +91,7 @@ var addToCartButtons = document.getElementsByClassName('view-product-link')
       cart[productString] = { image: productImage, quantity: 1 };
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    document.getElementsByClassName(".view-product-link").innerHTML = "Item added to cart";
+    document.getElementsByClassName(".view-product-link")[0].innerHTML = "Item added to cart";
     renderCart();
     updateCartCounter();
   });
@@ -178,79 +178,24 @@ updateCartCounter();
 cartWidgetOnScrolldown();
 
 
-var quoteCart = function (){
-
-  const cart = JSON.parse(localStorage.getItem('cart')) || {};
-  const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'inc/sendQuote.php');
-  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-        alert('Quote request sent!');
-    }
-    else if (xhr.status !== 200) {
-        alert('Request failed.  Returned status of ' + xhr.status);
-    }
-};
-
-xhr.send(encodeURI('cart=' + JSON.stringify(cart)));
-
-}
-
-
-var clContactForm = function() {
-        
-  /* local validation */
-  $('#contactForm').validate({
+function sendCartData() {
   
-      /* submit via ajax */
-      submitHandler: function(form) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
+  const cartData = Object.entries(cart).map(([key, value]) => ({ product: key, quantity: value.quantity }));
 
-          var sLoader = $('.submit-loader');
-
-          $.ajax({
-
-              type: "POST",
-              url: "inc/sendEmail.php",
-              data: $(form).serialize(),
-              beforeSend: function() { 
-
-                  sLoader.slideDown("slow");
-
-              },
-              success: function(msg) {
-
-                  // Message was sent
-                  if (msg == 'OK') {
-                      sLoader.slideUp("slow"); 
-                      $('.message-warning').fadeOut();
-                      $('#contactForm').fadeOut();
-                      $('.message-success').fadeIn();
-                  }
-                  // There was an error
-                  else {
-                      sLoader.slideUp("slow"); 
-                      $('.message-warning').html(msg);
-                      $('.message-warning').slideDown("slow");
-                  }
-
-              },
-              error: function() {
-
-                  sLoader.slideUp("slow"); 
-                  $('.message-warning').html("Something went wrong. Please try again.");
-                  $('.message-warning').slideDown("slow");
-
-              }
-
-          });
-      }
-
+  const formData = {};
+  const formFields = ['contactName', 'contactSurname', 'contactEmail', 'contactNumber', 'contactCompany', 'contactVAT', 'contactLineOne', 'contactLineTwo', 'contactCity', 'contactProvince', 'contactPostal'];
+  formFields.forEach(field => {
+    formData[field] = document.getElementById(field).value;
   });
-};
 
-
-
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '../inc/sendQuote.php');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({ cart: cartData, formData }));
+  
+  console.log(cartData);
+}
 
 
 updateCartCounter();

@@ -274,7 +274,6 @@
         </div>
 
         <div class="cart-section row" data-aos="">
-            <form name="cart-form" id="cart-form" method="post" action="" novalidate="novalidate">
                 <div class="cart-cont">
                     <div class="cart-list">
                         <div class="cart-title">
@@ -294,6 +293,8 @@
                         </div>
                      </div>
                 </div>
+
+                <form name="cart-form" id="cartForm" method="post" action="" novalidate="novalidate">
                 <div class="form-cont">
                     <fieldset>
                     <div class="form-field">
@@ -353,7 +354,7 @@
                     </fieldset> 
                 </div>
                 <div class="form-field">
-                <button class="full-width btn--primary" onclick="quoteCart()" style="margin-top: 50px;">Submit Quote</button>
+                <button class="full-width btn--primary" style="margin-top: 50px;" onclick="sendCartData()">Submit Quote</button>
                 <div class="submit-loader">
                     <div class="text-loader">Sending...</div>
                     <div class="s-loader">
