@@ -2804,6 +2804,22 @@ img {
     color: #000000;
 }
 
+.view-cart-link{
+    display: none;
+    font-size: 24px;
+    font-weight: normal;
+    color: #39b54a;
+}
+
+.cart-link{
+    color: #000000;
+}
+
+.cart-link a:hover{
+    color: #39b54a;
+    cursor: pointer;
+}
+
 .service-icon {
     display: flex;
     flex-direction: column;

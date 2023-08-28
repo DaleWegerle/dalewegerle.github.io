@@ -17,14 +17,10 @@ document.querySelector('.view-product-link').addEventListener('click', () => {
 });
 
 document.querySelector('.view-product-link').addEventListener('click', () => {
-  document.querySelector('.view-product-link').innerHTML = 'Item added to cart';
-  document.querySelector('.view-product-link').classList.add = 'view-cart-link';
-  document.querySelector('.view-product-link').classList.remove = 'view-product-link';
+  document.querySelector('.view-product-link').style.display = 'none';
+  document.querySelector('.view-cart-link').style.display = 'block';
 });
 
-document.querySelector('.view-cart-link').addEventListener('click', () => {
-  document.querySelector('.view-cart-link').href = '../../cart.html';
-});
 
 function updateCartCounter() {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
