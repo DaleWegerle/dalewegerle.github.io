@@ -2804,8 +2804,11 @@ img {
     color: #000000;
 }
 
-.view-cart-link{
+#cart-display{
     display: none;
+}
+
+.view-cart-link{
     font-size: 24px;
     font-weight: normal;
     color: #39b54a;
