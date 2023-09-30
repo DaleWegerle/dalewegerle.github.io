@@ -3648,6 +3648,33 @@ img {
 }
 
 
+
+.cart-message-warning,
+.cart-message-success {
+    display: none;
+    background: #111111;
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 3rem;
+    margin-bottom: 3.6rem;
+    width: 100%;
+}
+
+.cart-message-warning {
+    color: #ff6163;
+}
+
+.cart-message-success {
+    color: #39b54a;
+}
+
+.cart-message-warning i,
+.cart-message-success i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
 /* form loader
  * ----------------------------------------------- */
 .submit-loader {

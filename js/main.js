@@ -347,11 +347,21 @@
         
         /* local validation */
         $('#contactForm').validate({
+
+            
         
             /* submit via ajax */
             submitHandler: function(form) {
     
                 var sLoader = $('.submit-loader');
+
+                const captchaResponse = grecaptcha.getResponse();
+
+                if(!captchaResponse.length > 0){
+                    sLoader.slideUp("slow"); 
+                    $('.message-warning').html("Captcha Not Complete");
+                    $('.message-warning').slideDown("slow");
+                }
     
                 $.ajax({
     
@@ -378,7 +388,6 @@
                             $('.message-warning').html(msg);
                             $('.message-warning').slideDown("slow");
                         }
-    
                     },
                     error: function() {
     
@@ -399,14 +408,6 @@
 
     var clContactForm = function() {
 
-        const captchaResponse = grecaptcha.getResponse();
-
-            if(!captchaResponse.length > 0){
-                sLoader.slideUp("slow"); 
-                $('.message-warning').html("Captcha Not Complete");
-                $('.message-warning').slideDown("slow");
-            }
-
         
         /* local validation */
         $('#contactForm').validate({
@@ -415,9 +416,18 @@
             submitHandler: function(form) {
     
                 var sLoader = $('.submit-loader');
+
+                const captchaResponse = grecaptcha.getResponse();
+
+                if(!captchaResponse.length > 0){
+                    sLoader.slideUp("slow"); 
+                    $('.message-warning').html("Captcha Not Complete");
+                    $('.message-warning').slideDown("slow");
+                }
+    
     
                 $.ajax({
-                    
+
                     type: "POST",
                     url: "inc/sendEmail.php",
                     data: $(form).serialize(),

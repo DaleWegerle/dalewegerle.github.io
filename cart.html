@@ -351,13 +351,15 @@
                         <input name="contactPostal" type="text" id="contactPostal" placeholder="Postal Code" value=""
                             minlength="4" maxlength="4" required="" aria-required="false" class="full-width">
                     </div>
+
+                    <div class="g-recaptcha"
+                     data-sitekey="6LdZoykoAAAAAAeyw2qTs5TZlw-v4pyBy_d59AaK"></div>
                     
                     </fieldset> 
                 </div>
                 <div class="form-field">
+                
                 <button class="full-width btn--primary" style="margin-top: 50px;" onclick="sendCartData()">Submit Quote</button>
-                <div class="g-recaptcha" 
-                            data-sitekey="6LdZoykoAAAAAAeyw2qTs5TZlw-v4pyBy_d59AaK"></div>
                 <div class="submit-loader">
                     <div class="text-loader">Sending...</div>
                     <div class="s-loader">
@@ -368,6 +370,15 @@
                 </div>
                 </div>
             </form>
+
+            <div class="cart-message-warning">
+                Something went wrong. Please try again.
+            </div>
+
+            <!-- contact-success -->
+            <div class="cart-message-success">
+                Your quote request was sent, thank you!<br>
+            </div>
         
         <div class="about__line"></div>
         </div>
@@ -413,7 +424,7 @@
                                 cols="50" required="" aria-required="true" class="full-width"></textarea>
                         </div>
                         <div class="form-field">
-                            <div class="g-recaptcha" 
+                            <div class="g-recaptcha" style="margin-top: 25px;"
                             data-sitekey="6LdZoykoAAAAAAeyw2qTs5TZlw-v4pyBy_d59AaK"></div>
                             <button class="full-width btn--primary" type="submit">Submit</button>
                             <div class="submit-loader">

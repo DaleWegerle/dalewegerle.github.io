@@ -168,6 +168,14 @@ function sendCartData() {
     formData[field] = document.getElementById(field).value;
   });
 
+  const captchaResponse = grecaptcha.getResponse();
+
+  if(!captchaResponse.length > 0){
+      sLoader.slideUp("slow"); 
+      $('.cart-message-warning').html("Captcha Not Complete");
+      $('.cart-message-warning').slideDown("slow");
+  }
+
   // Add the reCAPTCHA token to your form data
   formData['g-recaptcha-response'] = grecaptcha.getResponse();
 
@@ -178,22 +186,22 @@ function sendCartData() {
   xhr.onload = function() {
     if (xhr.status === 200) {
       sLoader.slideUp("slow"); 
-      $('.message-warning').fadeOut();
+      $('.cart-message-warning').fadeOut();
       $('#cartForm').fadeOut();
-      $('.message-success').fadeIn();
+      $('.cart-message-success').fadeIn();
       console.log('Server response:', xhr.responseText);
     } else {
       sLoader.slideUp("slow"); 
-      $('.message-warning').html(xhr.status, xhr.statusText);
-      $('.message-warning').slideDown("slow");
+      $('.cart-message-warning').html(xhr.status, xhr.statusText);
+      $('.cart-message-warning').slideDown("slow");
       console.error('Server error:', xhr.status, xhr.statusText);
     }
   };
   
   xhr.onerror = function() {
     sLoader.slideUp("slow"); 
-    $('.message-warning').html("Something went wrong. Please try again.");
-    $('.message-warning').slideDown("slow");
+    $('.cart-message-warning').html("Something went wrong. Please try again.");
+    $('.cart-message-warning').slideDown("slow");
     console.error('Request failed:', xhr.status, xhr.statusText);
   };
   
