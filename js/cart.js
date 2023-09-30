@@ -103,7 +103,8 @@ var cartWidgetOnScrolldown = function() {
 updateCartCounter();
 cartWidgetOnScrolldown();
 
-
+//Original Cart
+/*
 function sendCartData() {
   
   const cart = JSON.parse(localStorage.getItem('cart')) || {};
@@ -118,6 +119,84 @@ function sendCartData() {
   const xhr = new XMLHttpRequest();
   xhr.open('POST', '../inc/sendQuote.php');
   xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({ cart: cartData, formData }));
+  
+  console.log(cartData);
+}
+
+//Server error handling cart
+function sendCartData() {
+  
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
+  const cartData = Object.entries(cart).map(([key, value]) => ({ product: key, quantity: value.quantity }));
+
+  const formData = {};
+  const formFields = ['contactName', 'contactSurname', 'contactEmail', 'contactNumber', 'contactCompany', 'contactVAT', 'contactLineOne', 'contactLineTwo', 'contactCity', 'contactProvince', 'contactPostal'];
+  formFields.forEach(field => {
+    formData[field] = document.getElementById(field).value;
+  });
+
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '../inc/sendQuote.php');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      console.log('Server response:', xhr.responseText);
+    } else {
+      console.error('Server error:', xhr.status, xhr.statusText);
+    }
+  };
+  
+  xhr.onerror = function() {
+    console.error('Request failed:', xhr.status, xhr.statusText);
+  };
+  
+  xhr.send(JSON.stringify({ cart: cartData, formData }));
+  
+  console.log(cartData);
+}*/
+
+//Server and Client Side Validation
+function sendCartData() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
+  const cartData = Object.entries(cart).map(([key, value]) => ({ product: key, quantity: value.quantity }));
+
+  const formData = {};
+  const formFields = ['contactName', 'contactSurname', 'contactEmail', 'contactNumber', 'contactCompany', 'contactVAT', 'contactLineOne', 'contactLineTwo', 'contactCity', 'contactProvince', 'contactPostal'];
+  formFields.forEach(field => {
+    formData[field] = document.getElementById(field).value;
+  });
+
+  // Add the reCAPTCHA token to your form data
+  formData['g-recaptcha-response'] = grecaptcha.getResponse();
+
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '../inc/sendQuote.php');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      sLoader.slideUp("slow"); 
+      $('.message-warning').fadeOut();
+      $('#cartForm').fadeOut();
+      $('.message-success').fadeIn();
+      console.log('Server response:', xhr.responseText);
+    } else {
+      sLoader.slideUp("slow"); 
+      $('.message-warning').html(xhr.status, xhr.statusText);
+      $('.message-warning').slideDown("slow");
+      console.error('Server error:', xhr.status, xhr.statusText);
+    }
+  };
+  
+  xhr.onerror = function() {
+    sLoader.slideUp("slow"); 
+    $('.message-warning').html("Something went wrong. Please try again.");
+    $('.message-warning').slideDown("slow");
+    console.error('Request failed:', xhr.status, xhr.statusText);
+  };
+  
   xhr.send(JSON.stringify({ cart: cartData, formData }));
   
   console.log(cartData);
