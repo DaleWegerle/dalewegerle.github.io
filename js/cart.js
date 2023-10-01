@@ -210,6 +210,53 @@ function sendCartData() {
   console.log(cartData);
 }
 
+/*
+//New AJAX cart
+
+function sendCartData() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || {};
+  const cartData = Object.entries(cart).map(([key, value]) => ({ product: key, quantity: value.quantity }));
+
+  const formData = {};
+  const formFields = ['contactName', 'contactSurname', 'contactEmail', 'contactNumber', 'contactCompany', 'contactVAT', 'contactLineOne', 'contactLineTwo', 'contactCity', 'contactProvince', 'contactPostal'];
+  formFields.forEach(field => {
+    formData[field] = document.getElementById(field).value;
+  });
+
+  const captchaResponse = grecaptcha.getResponse();
+
+  if(!captchaResponse.length > 0){
+      sLoader.slideUp("slow"); 
+      $('.cart-message-warning').html("Captcha Not Complete");
+      $('.cart-message-warning').slideDown("slow");
+  }
+
+  // Add the reCAPTCHA token to your form data
+  formData['g-recaptcha-response'] = grecaptcha.getResponse();
+
+  $.ajax({
+    url: '../inc/sendQuote.php',
+    type: 'POST',
+    data: JSON.stringify({ cart: cartData, formData }),
+    contentType: 'application/json',
+    success: function(response) {
+      sLoader.slideUp("slow"); 
+      $('.cart-message-warning').fadeOut();
+      $('#cartForm').fadeOut();
+      $('.cart-message-success').fadeIn();
+      console.log('Server response:', response);
+    },
+    error: function(xhr, status, error) {
+      sLoader.slideUp("slow"); 
+      $('.cart-message-warning').html(status, error);
+      $('.cart-message-warning').slideDown("slow");
+      console.error('Server error:', status, error);
+    }
+  });
+  
+  console.log(cartData);
+}*/
+
 
 updateCartCounter();
 cartWidgetOnScrolldown();
