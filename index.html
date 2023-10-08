@@ -51,6 +51,31 @@
 
 <body id="top" onload="renderCart()">
 
+    <!--MODAL-->
+
+    <div class="modal-screen" id="modal">
+        <div class="modal-container">
+            <img class="close-icon" id="close" src="images/close.png" alt="close modal icon" onclick="closeModal()">
+            <div class="modal-logo"> 
+                <img src="images/logo-full-black.png" alt="">
+            </div>
+            <div class="modal-desc">
+                Subscribe to our newsletter to receive the latest product updates and valuable industry insights. You
+                can unsubscribe at any time.
+            </div>
+            <div class="modal-subscribe">
+                <div class="subscribe-form">
+                    <form id="chimp-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email"
+                            placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -1018,6 +1043,8 @@
         showSlidesMobi();
 
         setInterval(updateCartCounter, 1000);
+
+        
 
     </script>
 

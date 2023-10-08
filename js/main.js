@@ -404,15 +404,15 @@
     };
 
     //Client side validation
-
-
+    
+/*
     var clContactForm = function() {
 
         
-        /* local validation */
+        //local validation 
         $('#contactForm').validate({
 
-            /* submit via ajax */
+            //submit via ajax
             submitHandler: function(form) {
     
                 var sLoader = $('.submit-loader');
@@ -466,7 +466,7 @@
     
         });
     };
-
+*/
     
    /* Animate On Scroll
     * ------------------------------------------------------ */
@@ -515,6 +515,28 @@
         } 
 
     };
+
+    //MODAL
+    var modal = document.getElementById("modal");
+    var close = document.getElementById("close");
+
+    window.addEventListener('load', function() {
+        if(modal.style.display = 'none'){
+            modal.style.display = 'none';
+        }
+        else{
+            modal.style.display = 'block';
+        }
+    })
+
+    modal.addEventListener('click', closeModal());
+    close.addEventListener('click', closeModal());
+
+    function closeModal(){
+        modal.style.display = 'none';
+    }
+
+    
 
 
    /* Back to Top

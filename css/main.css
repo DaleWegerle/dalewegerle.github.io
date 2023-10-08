@@ -2660,23 +2660,6 @@ img {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ===================================================================
  * # about
  *
@@ -4162,5 +4145,113 @@ footer .row {
     }
 }
 
+/*MODAL MAIN*/
 
-/*# sourceMappingURL=main.css.map */
+.modal-screen {
+    width: 100vw;
+    height: 100vh;
+    background-color:  rgba(0, 0, 0, 0.801);
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.modal-container{
+    width: 80%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 25px;
+    position: relative;
+}
+
+.close-icon{
+    width: 15px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.modal-logo{
+    width: 75%;
+    margin-bottom: 25px;
+}
+
+
+.modal-subscribe .subscribe-form {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.modal-subscribe #chimp-form {
+    width: 100%;
+}
+
+.modal-desc{
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.modal-subscribe #chimp-form input[type="email"] {
+    width: 100%;
+    height: 5.4rem;
+    padding: 1.2rem 160px 1.2rem 60px;
+    background: url(../images/email-icon.png) 20px center no-repeat, rgba(0, 0, 0, 0.1);
+    background-size: 24px 16px, auto;
+    border: none;
+    margin-bottom: 1.8rem;
+    color: rgb(85, 85, 85);
+}
+
+.modal-subscribe #chimp-form input[type="email"]:focus {
+    color: rgba(85, 85, 85);
+}
+
+.modal-subscribe #chimp-form input[type="email"]::-webkit-input-placeholder {
+    color: rgba(85, 85, 85);
+}
+
+.modal-subscribe #chimp-form input[type="email"]:-moz-placeholder {
+    color: rgba(85, 85, 85);
+    /* Firefox 18- */
+}
+
+.modal-subscribe #chimp-form input[type="email"]::-moz-placeholder {
+    color: rgba(85, 85, 85);
+    /* Firefox 19+ */
+}
+
+.modal-subscribe #chimp-form input[type="email"]:-ms-input-placeholder {
+    color: rgba(85, 85, 85);
+}
+
+.modal-subscribe #chimp-form input[type="email"].placeholder {
+    color: rgba(85, 85, 85) !important;
+}
+
+.modal-subscribe #chimp-form input[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #FFFFFF;
+    background: #39b54a;
+    border-color: #39b54a;
+    padding: 0 20px;
+}
+
+.modal-subscribe #chimp-form label {
+    color: #FFFFFF;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.3rem;
+    padding: 0 2rem;
+}
+
+.modal-subscribe #chimp-form label i {
+    padding-right: 6px;
+}
+
+
